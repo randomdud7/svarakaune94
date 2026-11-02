@@ -16,7 +16,7 @@ export function BeforeAfter({
   const [pos, setPos] = useState(50);
 
   return (
-    <div className="relative aspect-[4/5] w-full select-none overflow-hidden rounded-xl bg-muted">
+    <div className="relative aspect-[4/5] w-full select-none overflow-hidden rounded-xl bg-muted ring-ring focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-offset-background">
       <Image
         src={afterSrc}
         alt={alt}

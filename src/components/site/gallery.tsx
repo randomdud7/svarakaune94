@@ -26,25 +26,20 @@ const PAIRS = [
     title: "Dušo kabina",
     caption: "Muilo nuosėdos padėkle ir stikluose – nuvalytos iki blizgesio.",
   },
+  {
+    beforeSrc: "/photos/virtuve-filtras-pries.jpg",
+    afterSrc: "/photos/virtuve-filtras-darbas.jpg",
+    alt: "Gartraukio filtras prieš ir po valymo – riebalai pašalinti",
+    title: "Virtuvė – gartraukio filtrai",
+    caption: "Nuo riebalais apaugusio tinklelio iki švaraus filtro.",
+  },
 ];
 
-const SHOTS = [
-  {
-    src: "/photos/langai-namas.jpg",
-    alt: "Modernus namas, kurio langus ir palanges valėme",
-    label: "Langų valymas – šiuolaikinis objektas",
-  },
-  {
-    src: "/photos/virtuve-filtras-pries.jpg",
-    alt: "Riebalais apaugęs gartraukio filtras prieš valymą",
-    label: "Virtuvė – gartraukio filtrai prieš valymą",
-  },
-  {
-    src: "/photos/virtuve-filtras-darbas.jpg",
-    alt: "Gartraukio filtro plovimas darbo metu",
-    label: "Darbo metu – kiekviena detalė svarbi",
-  },
-];
+const FEATURED = {
+  src: "/photos/langai-namas.jpg",
+  alt: "Modernus namas, kurio langus ir palanges valėme",
+  label: "Langų valymas – šiuolaikinis objektas",
+};
 
 export function Gallery() {
   return (
@@ -63,9 +58,9 @@ export function Gallery() {
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2">
           {PAIRS.map((pair, index) => (
-            <Reveal key={pair.title} delay={index * 0.08} className="h-full">
+            <Reveal key={pair.title} delay={(index % 2) * 0.08} className="h-full">
               <figure className="flex h-full flex-col rounded-2xl border bg-card p-3">
                 <BeforeAfter
                   beforeSrc={pair.beforeSrc}
@@ -83,26 +78,22 @@ export function Gallery() {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-6 sm:grid-cols-3">
-          {SHOTS.map((shot, index) => (
-            <Reveal key={shot.src} delay={index * 0.08}>
-              <figure className="relative aspect-[4/5] overflow-hidden rounded-2xl border">
-                <Image
-                  src={shot.src}
-                  alt={shot.alt}
-                  fill
-                  sizes="(min-width: 640px) 33vw, 100vw"
-                  className="object-cover transition-transform duration-500 hover:scale-[1.03]"
-                />
-                <figcaption className="absolute inset-x-3 bottom-3">
-                  <span className="inline-block rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur">
-                    {shot.label}
-                  </span>
-                </figcaption>
-              </figure>
-            </Reveal>
-          ))}
-        </div>
+        <Reveal delay={0.05}>
+          <figure className="relative mt-6 aspect-[4/3] w-full overflow-hidden rounded-2xl border sm:aspect-[16/9]">
+            <Image
+              src={FEATURED.src}
+              alt={FEATURED.alt}
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+            <figcaption className="absolute inset-x-4 bottom-4">
+              <span className="inline-block rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur">
+                {FEATURED.label}
+              </span>
+            </figcaption>
+          </figure>
+        </Reveal>
 
         <Reveal delay={0.1}>
           <p className="mt-10 max-w-2xl text-sm text-muted-foreground">

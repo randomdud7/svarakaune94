@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/site";
 
 const NAV_LINKS = [
-  { href: "#paslaugos", label: "Paslaugos" },
-  { href: "#kaip-veikia", label: "Kaip veikia" },
-  { href: "#galerija", label: "Galerija" },
-  { href: "#atsiliepimai", label: "Atsiliepimai" },
-  { href: "#kontaktai", label: "Kontaktai" },
+  { href: "/#paslaugos", label: "Paslaugos" },
+  { href: "/#kaip-veikia", label: "Kaip veikia" },
+  { href: "/#galerija", label: "Galerija" },
+  { href: "/#atsiliepimai", label: "Atsiliepimai" },
+  { href: "/#kontaktai", label: "Kontaktai" },
 ];
 
 export function SiteHeader() {
@@ -23,12 +23,21 @@ export function SiteHeader() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   return (
     <>
       <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur">
         <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <a
-          href="#pradzia"
+          href="/"
           className="flex items-center gap-2.5 font-semibold tracking-tight"
           aria-label="Švara Kaune – grįžti į pradžią"
         >

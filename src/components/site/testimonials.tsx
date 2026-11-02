@@ -68,6 +68,16 @@ export function Testimonials() {
             </Reveal>
           ))}
         </div>
+
+        {/* TODO (išleidimui): pakeisti pavyzdinius atsiliepimus tikrais,
+            gavus klientų rašytinį sutikimą. Žr. PROJEKTO-BUSENA.md. */}
+        <Reveal delay={0.1}>
+          <p className="mt-8 rounded-xl bg-muted/60 px-5 py-4 text-sm text-muted-foreground">
+            Pastaba: svetainės paleidimo etape pateikiami pavyzdiniai
+            atsiliepimai. Tikrų klientų atsiliepimus skelbsime tik gavę jų
+            sutikimą.
+          </p>
+        </Reveal>
       </div>
     </section>
   );

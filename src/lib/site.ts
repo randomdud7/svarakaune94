@@ -8,4 +8,11 @@ export const SITE = {
   email: "info@svarakaune.lt",
   hours: "I–VII · 8:00–20:00",
   area: "Visas Kauno miestas",
+  // Rekvizitai (footer + teisiniai puslapiai).
+  // TODO: įrašyti tikrus duomenis – dabar laikinieji!
+  legal: {
+    name: "Švara Kaune",
+    code: "pildoma",
+    address: "Kaunas, Lietuva",
+  },
 } as const;
