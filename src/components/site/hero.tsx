@@ -30,7 +30,7 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:py-32">
         <Reveal>
-          <p className="inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          <p className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.18em] text-primary">
             Namų valymo paslaugos · Kaunas
           </p>
         </Reveal>
@@ -74,7 +74,7 @@ export function Hero() {
             {HIGHLIGHTS.map(({ icon: Icon, title, text }) => (
               <div key={title} className="flex items-start gap-3">
                 <Icon
-                  className="mt-1 size-5 shrink-0 text-muted-foreground"
+                  className="mt-1 size-5 shrink-0 text-primary"
                   aria-hidden="true"
                 />
                 <div>

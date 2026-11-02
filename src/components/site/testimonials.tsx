@@ -26,8 +26,8 @@ export function Testimonials() {
     <section id="atsiliepimai" className="scroll-mt-20 border-t">
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-            03 · Atsiliepimai
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+            04 · Atsiliepimai
           </p>
           <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
             Ką sako klientai.
@@ -50,7 +50,7 @@ export function Testimonials() {
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      className="size-4 fill-current"
+                      className="size-4 fill-current text-amber-400"
                       aria-hidden="true"
                     />
                   ))}

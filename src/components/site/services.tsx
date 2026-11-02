@@ -46,7 +46,7 @@ export function Services() {
     <section id="paslaugos" className="scroll-mt-20 border-t">
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
             01 · Paslaugos
           </p>
           <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
@@ -63,7 +63,7 @@ export function Services() {
             <Reveal key={service.name} delay={index * 0.1} className="h-full">
               <article className="flex h-full flex-col rounded-2xl border bg-card p-8 transition-shadow duration-300 hover:shadow-lg">
                 <div className="flex items-start justify-between gap-4">
-                  <span className="flex size-12 items-center justify-center rounded-xl bg-foreground text-background">
+                  <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
                     <service.icon className="size-6" aria-hidden="true" />
                   </span>
                   <p className="text-right">
@@ -87,7 +87,7 @@ export function Services() {
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <Check
-                        className="mt-0.5 size-4 shrink-0"
+                        className="mt-0.5 size-4 shrink-0 text-primary"
                         aria-hidden="true"
                       />
                       {feature}

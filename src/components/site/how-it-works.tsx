@@ -30,7 +30,7 @@ export function HowItWorks() {
     <section id="kaip-veikia" className="scroll-mt-20 border-t bg-muted/40">
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
             02 · Kaip veikia
           </p>
           <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
@@ -42,10 +42,10 @@ export function HowItWorks() {
           {STEPS.map((step, index) => (
             <li key={step.number}>
               <Reveal delay={index * 0.08} className="h-full">
-                <div className="h-full border-t-2 border-foreground pt-6">
+                <div className="h-full border-t-2 border-primary pt-6">
                   <span
                     aria-hidden="true"
-                    className="text-5xl font-bold tracking-tight text-foreground/15"
+                    className="text-5xl font-bold tracking-tight text-primary/20"
                   >
                     {step.number}
                   </span>

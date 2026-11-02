@@ -30,7 +30,7 @@ export function ContactCta() {
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-background/60">
-            04 · Kontaktai
+            05 · Kontaktai
           </p>
           <h2 className="mt-4 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Skambinkite šiandien – grįžkite į švaresnius namus jau rytoj.

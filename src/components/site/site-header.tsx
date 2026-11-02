@@ -8,6 +8,7 @@ import { SITE } from "@/lib/site";
 const NAV_LINKS = [
   { href: "#paslaugos", label: "Paslaugos" },
   { href: "#kaip-veikia", label: "Kaip veikia" },
+  { href: "#galerija", label: "Galerija" },
   { href: "#atsiliepimai", label: "Atsiliepimai" },
   { href: "#kontaktai", label: "Kontaktai" },
 ];
@@ -31,7 +32,7 @@ export function SiteHeader() {
           className="flex items-center gap-2.5 font-semibold tracking-tight"
           aria-label="Švara Kaune – grįžti į pradžią"
         >
-          <span className="flex size-8 items-center justify-center rounded-lg bg-foreground text-background">
+          <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
             <Sparkles className="size-4" aria-hidden="true" />
           </span>
           <span className="text-base">Švara Kaune</span>
@@ -93,7 +94,7 @@ export function SiteHeader() {
         >
           <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
             <span className="flex items-center gap-2.5 font-semibold tracking-tight">
-              <span className="flex size-8 items-center justify-center rounded-lg bg-foreground text-background">
+              <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <Sparkles className="size-4" aria-hidden="true" />
               </span>
               Švara Kaune
