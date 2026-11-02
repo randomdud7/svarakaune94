@@ -17,13 +17,24 @@ const HIGHLIGHTS = [
 
 export function Hero() {
   return (
-    <section id="pradzia" className="relative overflow-hidden">
+    <section
+      id="pradzia"
+      className="relative overflow-hidden bg-linear-to-b from-teal-50/80 via-background to-background"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-24 -top-40 size-[420px] rounded-full bg-teal-200/50 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-32 top-1/2 size-[360px] rounded-full bg-amber-100/70 blur-3xl"
+      />
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -right-32 -top-32 hidden select-none sm:block"
       >
         <Sparkles
-          className="size-[480px] text-foreground/[0.05]"
+          className="size-[480px] text-primary/[0.07]"
           strokeWidth={0.8}
         />
       </div>
@@ -37,7 +48,9 @@ export function Hero() {
 
         <Reveal delay={0.08}>
           <h1 className="mt-8 max-w-3xl text-5xl font-bold leading-[1.04] tracking-tight sm:text-6xl md:text-7xl">
-            Švarūs namai.{" "}
+            <span className="bg-linear-to-r from-teal-700 via-teal-600 to-emerald-600 bg-clip-text text-transparent">
+              Švarūs namai.
+            </span>{" "}
             <span className="text-muted-foreground">Be pastangų.</span>
           </h1>
         </Reveal>
@@ -52,7 +65,11 @@ export function Hero() {
 
         <Reveal delay={0.24}>
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" className="h-14 px-8 text-base">
+            <Button
+              asChild
+              size="lg"
+              className="h-14 bg-linear-to-r from-teal-700 to-teal-600 px-8 text-base shadow-lg shadow-teal-700/25 transition-all hover:from-teal-800 hover:to-teal-700 hover:shadow-teal-800/30"
+            >
               <a href={SITE.phoneHref}>
                 <Phone className="size-5" aria-hidden="true" />
                 Skambinti: {SITE.phoneDisplay}

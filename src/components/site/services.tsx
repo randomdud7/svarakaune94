@@ -21,6 +21,8 @@ const SERVICES = [
       "Šiukšlių išnešimas",
     ],
     cta: "Užsisakyti reguliarų valymą",
+    chipClass: "bg-teal-100 text-teal-700",
+    checkClass: "text-teal-700",
   },
   {
     icon: Sparkles,
@@ -38,6 +40,8 @@ const SERVICES = [
       "Voratinkliai, grindjuostės, sunkiai pasiekiamos vietos",
     ],
     cta: "Užsisakyti generalinį valymą",
+    chipClass: "bg-amber-100 text-amber-700",
+    checkClass: "text-amber-700",
   },
   {
     icon: AppWindow,
@@ -54,6 +58,8 @@ const SERVICES = [
       "Durų bei baldų stiklinės dalys",
     ],
     cta: "Užsisakyti langų valymą",
+    chipClass: "bg-sky-100 text-sky-700",
+    checkClass: "text-sky-700",
   },
   {
     icon: Refrigerator,
@@ -70,6 +76,8 @@ const SERVICES = [
       "Durelių, rankenų ir plytelių nuvalymas",
     ],
     cta: "Užsisakyti virtuvės valymą",
+    chipClass: "bg-violet-100 text-violet-700",
+    checkClass: "text-violet-700",
   },
 ];
 
@@ -96,7 +104,9 @@ export function Services() {
             <Reveal key={service.name} delay={index * 0.1} className="h-full">
               <article className="flex h-full flex-col rounded-2xl border bg-card p-8 transition-shadow duration-300 hover:shadow-lg">
                 <div className="flex items-start justify-between gap-4">
-                  <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                  <span
+                    className={`flex size-12 items-center justify-center rounded-xl ${service.chipClass}`}
+                  >
                     <service.icon className="size-6" aria-hidden="true" />
                   </span>
                   <p className="text-right">
@@ -120,7 +130,7 @@ export function Services() {
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <Check
-                        className="mt-0.5 size-4 shrink-0 text-primary"
+                        className={`mt-0.5 size-4 shrink-0 ${service.checkClass}`}
                         aria-hidden="true"
                       />
                       {feature}

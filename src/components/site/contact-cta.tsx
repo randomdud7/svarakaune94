@@ -61,7 +61,14 @@ export function ContactCta() {
   }
 
   return (
-    <section id="kontaktai" className="scroll-mt-20 bg-foreground text-background">
+    <section
+      id="kontaktai"
+      className="relative scroll-mt-20 overflow-hidden bg-linear-to-br from-teal-950 via-teal-900 to-teal-800 text-background"
+    >
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute right-0 top-0 size-[420px] translate-x-1/3 -translate-y-1/3 rounded-full bg-teal-400/20 blur-3xl"
+      />
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <div className="grid gap-14 lg:grid-cols-[1fr_minmax(0,26rem)] lg:gap-12">
           <div>

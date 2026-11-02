@@ -88,7 +88,7 @@ export function Gallery() {
               className="object-cover"
             />
             <figcaption className="absolute inset-x-4 bottom-4">
-              <span className="inline-block rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur">
+              <span className="inline-block rounded-full bg-primary/95 px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-sm backdrop-blur">
                 {FEATURED.label}
               </span>
             </figcaption>

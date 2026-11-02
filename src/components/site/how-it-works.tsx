@@ -27,7 +27,10 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section id="kaip-veikia" className="scroll-mt-20 border-t bg-muted/40">
+    <section
+      id="kaip-veikia"
+      className="scroll-mt-20 border-t bg-linear-to-b from-teal-50/70 to-background"
+    >
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28">
         <Reveal>
           <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
@@ -45,7 +48,7 @@ export function HowItWorks() {
                 <div className="h-full border-t-2 border-primary pt-6">
                   <span
                     aria-hidden="true"
-                    className="text-5xl font-bold tracking-tight text-primary/20"
+                    className="bg-linear-to-b from-teal-600/50 to-teal-600/10 bg-clip-text text-5xl font-bold tracking-tight text-transparent"
                   >
                     {step.number}
                   </span>

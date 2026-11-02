@@ -11,7 +11,7 @@ const LEGAL_LINKS = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto border-t">
+    <footer className="mt-auto border-t bg-teal-50/40">
       <div className="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground sm:flex-row">
           <p>

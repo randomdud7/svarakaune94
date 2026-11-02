@@ -35,6 +35,10 @@ export function SiteHeader() {
   return (
     <>
       <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur">
+        <div
+          aria-hidden="true"
+          className="h-1 w-full bg-linear-to-r from-teal-700 via-emerald-500 to-amber-400"
+        />
         <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6">
         <a
           href="/"

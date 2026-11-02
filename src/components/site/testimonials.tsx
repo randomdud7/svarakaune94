@@ -8,16 +8,19 @@ const TESTIMONIALS = [
     text: "Butas spindi, o aš galiausiai savaitgalį leidžiu su šeima, o ne su šluoste. Ačiū!",
     name: "Rasa",
     place: "Eiguliai",
+    cardClass: "border-teal-100 bg-teal-50/70",
   },
   {
     text: "Generalinis valymas prieš šventes – viskas atlikta laiku, kruopščiai ir visiškai be rūpesčių.",
     name: "Tomas",
     place: "Šančiai",
+    cardClass: "border-amber-100 bg-amber-50/70",
   },
   {
     text: "Ilgai ieškojau žmogaus, kuriuo drąsiai galiu pasitikėti savo namuose. Radau.",
     name: "Jolanta",
     place: "Aleksotas",
+    cardClass: "border-rose-100 bg-rose-50/70",
   },
 ];
 
@@ -41,7 +44,9 @@ export function Testimonials() {
               delay={index * 0.1}
               className="h-full"
             >
-              <figure className="flex h-full flex-col rounded-2xl border bg-card p-8">
+              <figure
+                className={`flex h-full flex-col rounded-2xl border ${testimonial.cardClass} p-8`}
+              >
                 <div
                   className="flex gap-1"
                   role="img"

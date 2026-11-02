@@ -52,7 +52,7 @@ export function BeforeAfter({
         aria-hidden="true"
       >
         <div className="absolute inset-y-0 -ml-px w-0.5 bg-white/90 shadow-[0_0_6px_rgba(0,0,0,0.35)]" />
-        <div className="absolute top-1/2 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-neutral-900 shadow-lg ring-1 ring-black/10">
+        <div className="absolute top-1/2 flex size-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white text-teal-700 shadow-lg ring-1 ring-teal-900/10">
           <ChevronsLeftRight className="size-5" />
         </div>
       </div>
