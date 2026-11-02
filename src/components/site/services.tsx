@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Check, Home, Sparkles } from "lucide-react";
+import { AppWindow, ArrowRight, Check, Home, Refrigerator, Sparkles } from "lucide-react";
 import { Reveal } from "@/components/site/reveal";
 import { SITE } from "@/lib/site";
 
@@ -39,6 +39,38 @@ const SERVICES = [
     ],
     cta: "Užsisakyti generalinį valymą",
   },
+  {
+    icon: AppWindow,
+    name: "Langų valymas",
+    price: "susitarsime",
+    priceNote: "kainą pasakysiu iš karto",
+    description:
+      "Stiklai, rėmai ir palangės iš abiejų pusių – kur tik galima prieiti. Namuose vėl lengva ir šviesu.",
+    features: [
+      "Stiklai iš išorės ir iš vidaus",
+      "Rėmai ir jų sąsajos",
+      "Palangės ir nutekėjimo angos",
+      "Voratinkliai ir dulkės nuo rėmų",
+      "Durų bei baldų stiklinės dalys",
+    ],
+    cta: "Užsisakyti langų valymą",
+  },
+  {
+    icon: Refrigerator,
+    name: "Virtuvės įrangos valymas",
+    price: "susitarsime",
+    priceNote: "pagal darbų apimtį",
+    description:
+      "Sunkiausi virtuvės darbai – orkaitė, gartraukis ir šaldytuvas – sutvarkyti iki blizgesio, be riebalų ir kvapų.",
+    features: [
+      "Orkaitės ir kaitlentės vidaus valymas",
+      "Gartraukio ir riebalų filtrų plovimas",
+      "Šaldytuvo valymas iš vidaus ir išorės",
+      "Mikrobangų krosnelės ir paviršių valymas",
+      "Durelių, rankenų ir plytelių nuvalymas",
+    ],
+    cta: "Užsisakyti virtuvės valymą",
+  },
 ];
 
 export function Services() {
@@ -50,11 +82,12 @@ export function Services() {
             01 · Paslaugos
           </p>
           <h2 className="mt-4 max-w-2xl text-4xl font-bold tracking-tight sm:text-5xl">
-            Dvi paslaugos – visa švara, kurios reikia jūsų namams.
+            Visa švara, kurios reikia jūsų namams.
           </h2>
           <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-            Pasirinkite, kiek rūpesčių perduosite man – likusiu laiku tiesiog
-            naudokitės švariais namais.
+            Pasirinkite, kiek rūpesčių perduosite man – nuo kasdienės tvarkos
+            iki langų ir virtuvės įrangos. Likusiu laiku tiesiog naudokitės
+            švariais namais.
           </p>
         </Reveal>
 
@@ -114,7 +147,8 @@ export function Services() {
 
         <Reveal delay={0.15}>
           <p className="mt-8 max-w-2xl text-sm text-muted-foreground">
-            Galutinė kaina priklauso nuo namų ploto ir būklės. Paskambinkite{" "}
+            Galutinė kaina priklauso nuo namų ploto, būklės ir papildomų darbų
+            apimties. Paskambinkite{" "}
             <a
               href={SITE.phoneHref}
               className="font-medium text-foreground underline-offset-4 hover:underline"
